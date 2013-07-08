@@ -1,7 +1,5 @@
 require 'twitter_oauth'
-msg = ENV['MESSAGE']
-
-puts "TASK", msg
+msg = ENV[ARGV[0]]
 
 client = TwitterOAuth::Client.new(
     :consumer_key => ENV['CONSUMER_KEY'],
@@ -9,10 +7,11 @@ client = TwitterOAuth::Client.new(
     :token => ENV['ACCESS_TOKEN'],
     :secret => ENV['ACCESS_TOKEN_SECRET']
 )
-p client
+
+print "POST #{ARGV[0]}... "
 if client.authorized?
-  puts 'POST!!!!!!!!'
   client.update msg
+  puts 'done'
 else
   puts 'not authorzied'
 end
