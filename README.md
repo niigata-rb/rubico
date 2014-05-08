@@ -1,3 +1,5 @@
+[![Gitter chat](https://badges.gitter.im/niigata-rb/rubico.png)](https://gitter.im/niigata-rb/rubico)
+
 rubico
 ======
 
