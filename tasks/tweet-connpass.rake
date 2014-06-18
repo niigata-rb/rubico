@@ -20,7 +20,7 @@ namespace :tweet do
 
             if started_at > now
                 date = started_at.to_date
-                puts "次回のNiigara.rb meetup は #{date.mon}/#{date.day} 開催です"
+                tweet "次回のNiigara.rb meetup は #{date.mon}/#{date.day} 開催です"
             elsif ended_at < now
                 # past
             else
