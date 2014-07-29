@@ -27,7 +27,8 @@ namespace :tweet do
 								else
 									msg = "次回のNiigara.rb meetup は #{date.mon}/#{date.day} 開催です"
 								end
-								puts msg
+								tweet msg
+                
             elsif ended_at < now
                 # past
             end
